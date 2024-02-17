@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import pickle
 import pandas as pd
 import requests
-from werkzeug.utils import url_quote
+
 
 
 app = Flask(__name__)
