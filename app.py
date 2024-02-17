@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 import pickle
 import pandas as pd
 import requests
+from werkzeug.utils import url_quote
+
 
 app = Flask(__name__)
 
@@ -49,11 +51,7 @@ def index():
 def predict():
     movie_name = request.form['movie']
     recommend_movies,recommend_movies_poster = recommend(movie_name)
-    obj = {
-        'movie':recommend_movies,
-        'poster':recommend_movies_poster
-        
-    }
+    
 
     return render_template('index.html', obj=recommend_movies)
 
