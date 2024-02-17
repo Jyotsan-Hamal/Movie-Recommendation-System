@@ -16,10 +16,10 @@ def fetch_poster(movie_id):
 
 
 
-movies_list = pickle.load(open('movie_dict.pkl','rb'))
+movies_list = pickle.load(open('./movie_dict.pkl','rb'))
 movies = pd.DataFrame(movies_list)
 
-similarity = pickle.load(open('similarity.pkl','rb'))
+similarity = pickle.load(open('./similarity.pkl','rb'))
 
 
 
